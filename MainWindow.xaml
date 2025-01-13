@@ -1,0 +1,117 @@
+﻿<Window x:Class="pubg_recoil1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pubg_recoil1"
+        mc:Ignorable="d"
+        Title="PUBG Recoil" Height="504" Width="350" FontFamily="Microsoft YaHei" Padding="0,100,0,0">
+
+    <Window.Resources>
+        <!-- 定义一个样式来减少重复代码 -->
+        <Style x:Key="ImageStyle" TargetType="Image">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <TabControl RenderTransformOrigin="0.483,0.503">
+            <TabItem Header="自动识别">
+                <Grid Height="460" VerticalAlignment="Top">
+                    <TextBlock Text="1号" Width="20" Height="20" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+                    <Image Name= "resultImages" Width="100"  Height="45" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.541" Margin="18,257,226,0" />
+                    <TextBlock Text="2号" HorizontalAlignment="Left" Margin="8,5,0,89"/>
+
+                    <Image Name = "resultImage1" Width="100"  Height="50"   HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="18,39,0,0" />
+                    <Button Content="开启" HorizontalAlignment="Left" Margin="18,419,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="武器参数">
+                <Grid Height="92" Margin="-3,0,3,0">
+                    <TextBlock Text="武器" HorizontalAlignment="Left" Margin="8,-175,0,175"/>
+                    <TextBlock Text="配件" HorizontalAlignment="Left" Margin="8,-97,0,107"/>
+                    <Image Source="pack://application:,,,/Resources/weapons/AKM.png" Stretch="Uniform" Margin="-14,-140,259,210" />
+                    <StackPanel Margin="10,-70,13,-233">
+                        <!-- 第一行 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <ComboBox Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
+                                <Image Source="/Resources/scopes/none.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/quanxi.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/reddot.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/x2.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/x3.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/x4.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/x6.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/scopes/x8.png"  Style="{StaticResource ImageStyle}" />
+                            </ComboBox>
+                            <TextBox Width="200" Text="1.0"/>
+                        </StackPanel>
+
+                        <!-- 第二行 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <ComboBox Width="50" Margin="0,0,10,0">
+                                <Image Source="/Resources/stocks/heavy.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/stocks/none.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/stocks/normal.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/stocks/pg.png"  Style="{StaticResource ImageStyle}" />
+
+                            </ComboBox>
+                            <TextBox Width="200" Text="1.0" TextChanged="TextBox_TextChanged"/>
+                        </StackPanel>
+
+                        <!-- 第三行 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <ComboBox Width="50" Margin="0,0,10,0">
+                                <Image Source="/Resources/muzzles/bc1.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/bc2.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/bc3.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/none.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/xx.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/xx1.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/xy1.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/xy2.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/muzzles/xy3.png"  Style="{StaticResource ImageStyle}" />
+
+                            </ComboBox>
+                            <TextBox Width="200" Text="1.0"/>
+                        </StackPanel>
+
+                        <!-- 第四行 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <ComboBox Width="50" Margin="0,0,10,0">
+                                <Image Source="/Resources/grips/angle.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/light.png"  Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/line.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/none.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/red.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/thumb.png" Style="{StaticResource ImageStyle}" />
+
+                            </ComboBox>
+                            <TextBox Width="200" Text="1.0"/>
+                        </StackPanel>
+                      
+                        <!-- 第 six行 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <ComboBox Width="50" Margin="0,0,10,0">
+                                <Image Source="/Resources/poses/crawl.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/poses/down.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/poses/stand.png" Style="{StaticResource ImageStyle}" />
+                                <Image Source="/Resources/grips/angle.png" Style="{StaticResource ImageStyle}" />
+
+                            </ComboBox>
+                            <TextBox Width="200" Text="1.0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="宏配置">
+                <!-- 宏配置内容 -->
+            </TabItem>
+        </TabControl>
+    </Grid>
+  
+</Window>

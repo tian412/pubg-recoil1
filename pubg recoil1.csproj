@@ -1,0 +1,172 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>pubg_recoil1</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="picture\**" />
+    <EmbeddedResource Remove="picture\**" />
+    <None Remove="picture\**" />
+    <Page Remove="picture\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\grips\angle.png" />
+    <None Remove="Resources\grips\light.png" />
+    <None Remove="Resources\grips\line.png" />
+    <None Remove="Resources\grips\none.png" />
+    <None Remove="Resources\grips\red.png" />
+    <None Remove="Resources\grips\thumb.png" />
+    <None Remove="Resources\muzzles\bc1.png" />
+    <None Remove="Resources\muzzles\bc2.png" />
+    <None Remove="Resources\muzzles\bc3.png" />
+    <None Remove="Resources\muzzles\none.png" />
+    <None Remove="Resources\muzzles\xx.png" />
+    <None Remove="Resources\muzzles\xx1.png" />
+    <None Remove="Resources\muzzles\xy1.png" />
+    <None Remove="Resources\muzzles\xy2.png" />
+    <None Remove="Resources\muzzles\xy3.png" />
+    <None Remove="Resources\poses\crawl.png" />
+    <None Remove="Resources\poses\down.png" />
+    <None Remove="Resources\poses\stand.png" />
+    <None Remove="Resources\scopes\none.png" />
+    <None Remove="Resources\scopes\quanxi.png" />
+    <None Remove="Resources\scopes\reddot.png" />
+    <None Remove="Resources\scopes\x2.png" />
+    <None Remove="Resources\scopes\x3.png" />
+    <None Remove="Resources\scopes\x4.png" />
+    <None Remove="Resources\scopes\x6.png" />
+    <None Remove="Resources\scopes\x8.png" />
+    <None Remove="Resources\stocks\heavy.png" />
+    <None Remove="Resources\stocks\none.png" />
+    <None Remove="Resources\stocks\normal.png" />
+    <None Remove="Resources\stocks\pg.png" />
+    <None Remove="Resources\weapons\ACE32.png" />
+    <None Remove="Resources\weapons\AKM.png" />
+    <None Remove="Resources\weapons\AUG.png" />
+    <None Remove="Resources\weapons\aug1.png" />
+    <None Remove="Resources\weapons\Berry.png" />
+    <None Remove="Resources\weapons\DLG.png" />
+    <None Remove="Resources\weapons\DP28.png" />
+    <None Remove="Resources\weapons\FAMAS.png" />
+    <None Remove="Resources\weapons\G36C.png" />
+    <None Remove="Resources\weapons\GROZA.png" />
+    <None Remove="Resources\weapons\JS9.png" />
+    <None Remove="Resources\weapons\K2.png" />
+    <None Remove="Resources\weapons\M16.png" />
+    <None Remove="Resources\weapons\M249.png" />
+    <None Remove="Resources\weapons\M416.png" />
+    <None Remove="Resources\weapons\MG3.png" />
+    <None Remove="Resources\weapons\MINI.png" />
+    <None Remove="Resources\weapons\MK12.png" />
+    <None Remove="Resources\weapons\MK14.png" />
+    <None Remove="Resources\weapons\MK47.png" />
+    <None Remove="Resources\weapons\MP5.png" />
+    <None Remove="Resources\weapons\MP9.png" />
+    <None Remove="Resources\weapons\P90.png" />
+    <None Remove="Resources\weapons\PP19.png" />
+    <None Remove="Resources\weapons\QBU.png" />
+    <None Remove="Resources\weapons\QBZ.png" />
+    <None Remove="Resources\weapons\SCAR.png" />
+    <None Remove="Resources\weapons\SKS.png" />
+    <None Remove="Resources\weapons\sks1.png" />
+    <None Remove="Resources\weapons\SLR.png" />
+    <None Remove="Resources\weapons\TOM.png" />
+    <None Remove="Resources\weapons\UMP.png" />
+    <None Remove="Resources\weapons\UZI.png" />
+    <None Remove="Resources\weapons\VECTOR.png" />
+    <None Remove="Resources\weapons\VSS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.9.0.5494" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="4.0.1" />
+    <PackageReference Include="OpenCV" Version="2.4.11" />
+    <PackageReference Include="OpenCV.Net" Version="3.4.2" />
+    <PackageReference Include="OpenCvSharp4" Version="4.10.0.20241108" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.10.0.20241108" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20241108" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\grips\angle.png" />
+    <Resource Include="Resources\grips\light.png" />
+    <Resource Include="Resources\grips\line.png" />
+    <Resource Include="Resources\grips\none.png" />
+    <Resource Include="Resources\grips\red.png" />
+    <Resource Include="Resources\grips\thumb.png" />
+    <Resource Include="Resources\muzzles\bc1.png" />
+    <Resource Include="Resources\muzzles\bc2.png" />
+    <Resource Include="Resources\muzzles\bc3.png" />
+    <Resource Include="Resources\muzzles\none.png" />
+    <Resource Include="Resources\muzzles\xx.png" />
+    <Resource Include="Resources\muzzles\xx1.png" />
+    <Resource Include="Resources\muzzles\xy1.png" />
+    <Resource Include="Resources\muzzles\xy2.png" />
+    <Resource Include="Resources\muzzles\xy3.png" />
+    <Resource Include="Resources\poses\crawl.png" />
+    <Resource Include="Resources\poses\down.png" />
+    <Resource Include="Resources\poses\stand.png" />
+    <Resource Include="Resources\scopes\none.png" />
+    <Resource Include="Resources\scopes\quanxi.png" />
+    <Resource Include="Resources\scopes\reddot.png" />
+    <Resource Include="Resources\scopes\x2.png" />
+    <Resource Include="Resources\scopes\x3.png" />
+    <Resource Include="Resources\scopes\x4.png" />
+    <Resource Include="Resources\scopes\x6.png" />
+    <Resource Include="Resources\scopes\x8.png" />
+    <Resource Include="Resources\stocks\heavy.png" />
+    <Resource Include="Resources\stocks\none.png" />
+    <Resource Include="Resources\stocks\normal.png" />
+    <Resource Include="Resources\stocks\pg.png" />
+    <Resource Include="Resources\weapons\ACE32.png" />
+    <Resource Include="Resources\weapons\AKM.png" />
+    <Resource Include="Resources\weapons\AUG.png" />
+    <Resource Include="Resources\weapons\aug1.png" />
+    <Resource Include="Resources\weapons\Berry.png" />
+    <Resource Include="Resources\weapons\DLG.png" />
+    <Resource Include="Resources\weapons\DP28.png" />
+    <Resource Include="Resources\weapons\FAMAS.png" />
+    <Resource Include="Resources\weapons\G36C.png" />
+    <Resource Include="Resources\weapons\GROZA.png" />
+    <Resource Include="Resources\weapons\JS9.png" />
+    <Resource Include="Resources\weapons\K2.png" />
+    <Resource Include="Resources\weapons\M16.png" />
+    <Resource Include="Resources\weapons\M249.png" />
+    <Resource Include="Resources\weapons\M416.png" />
+    <Resource Include="Resources\weapons\MG3.png" />
+    <Resource Include="Resources\weapons\MINI.png" />
+    <Resource Include="Resources\weapons\MK12.png" />
+    <Resource Include="Resources\weapons\MK14.png" />
+    <Resource Include="Resources\weapons\MK47.png" />
+    <Resource Include="Resources\weapons\MP5.png" />
+    <Resource Include="Resources\weapons\MP9.png" />
+    <Resource Include="Resources\weapons\P90.png" />
+    <Resource Include="Resources\weapons\PP19.png" />
+    <Resource Include="Resources\weapons\QBU.png" />
+    <Resource Include="Resources\weapons\QBZ.png" />
+    <Resource Include="Resources\weapons\SCAR.png" />
+    <Resource Include="Resources\weapons\SKS.png" />
+    <Resource Include="Resources\weapons\sks1.png" />
+    <Resource Include="Resources\weapons\SLR.png" />
+    <Resource Include="Resources\weapons\TOM.png" />
+    <Resource Include="Resources\weapons\UMP.png" />
+    <Resource Include="Resources\weapons\UZI.png" />
+    <Resource Include="Resources\weapons\VECTOR.png" />
+    <Resource Include="Resources\weapons\VSS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="resolution_setting.cs">
+      <CustomToolNamespace>resolution_setting</CustomToolNamespace>
+    </Compile>
+  </ItemGroup>
+
+</Project>

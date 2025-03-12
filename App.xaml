@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:pubg_recoil1"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+ 
     </Application.Resources>
 </Application>

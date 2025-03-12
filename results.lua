@@ -1,0 +1,6 @@
+    weaponName = "p90"
+    grip = "none"
+    muzzle = "none"
+    scope = "none"
+    stock = "none"
+    pose = "none"

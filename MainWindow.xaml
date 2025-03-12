@@ -17,16 +17,20 @@
     </Window.Resources>
 
     <Grid>
+        <StackPanel>
+            <!-- 用于显示截图的 ItemsControl -->
+
+
+        </StackPanel>
         <TabControl RenderTransformOrigin="0.483,0.503">
             <TabItem Header="自动识别">
-                <Grid Height="460" VerticalAlignment="Top">
+                <Grid Height="463" VerticalAlignment="Top" Margin="1,0,-1,0">
                     <TextBlock Text="1号" Width="20" Height="20" HorizontalAlignment="Left" Margin="0,0,0,0"/>
-                    <Image Name= "resultImages" Width="100"  Height="45" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.541" Margin="18,257,226,0" />
                     <TextBlock Text="2号" HorizontalAlignment="Left" Margin="8,5,0,89"/>
-
-                    <Image Name = "resultImage1" Width="100"  Height="50"   HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="18,39,0,0" />
-                    <Button Content="开启" HorizontalAlignment="Left" Margin="18,419,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-
+                    <!-- 用于显示鼠标位置 -->
+                 
+                    <!-- 用于显示截图的 ItemsControl -->
+                    <Canvas x:Name="ScreenshotCanvas" Width="200" Height="200" Margin="10,10,10,10" Opacity="0.5"/>
                 </Grid>
 
             </TabItem>
@@ -38,7 +42,7 @@
                     <StackPanel Margin="10,-70,13,-233">
                         <!-- 第一行 -->
                         <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <ComboBox Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
+                            <ComboBox x:Name="scope_combobox" Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
                                 <Image Source="/Resources/scopes/none.png" Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/scopes/quanxi.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/scopes/reddot.png"  Style="{StaticResource ImageStyle}" />
@@ -48,24 +52,24 @@
                                 <Image Source="/Resources/scopes/x6.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/scopes/x8.png"  Style="{StaticResource ImageStyle}" />
                             </ComboBox>
-                            <TextBox Width="200" Text="1.0"/>
+                            <TextBox x:Name="scope_text" Width="200" Text="1.0"/>
                         </StackPanel>
 
                         <!-- 第二行 -->
                         <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <ComboBox Width="50" Margin="0,0,10,0">
+                            <ComboBox x:Name="stock_combobox" Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
                                 <Image Source="/Resources/stocks/heavy.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/stocks/none.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/stocks/normal.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/stocks/pg.png"  Style="{StaticResource ImageStyle}" />
 
                             </ComboBox>
-                            <TextBox Width="200" Text="1.0" TextChanged="TextBox_TextChanged"/>
+                            <TextBox x:Name="stock_text" Width="200" Text="1.0" />
                         </StackPanel>
 
                         <!-- 第三行 -->
                         <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <ComboBox Width="50" Margin="0,0,10,0">
+                            <ComboBox x:Name="muzzle_combobox" Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
                                 <Image Source="/Resources/muzzles/bc1.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/muzzles/bc2.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/muzzles/bc3.png"  Style="{StaticResource ImageStyle}" />
@@ -77,12 +81,12 @@
                                 <Image Source="/Resources/muzzles/xy3.png"  Style="{StaticResource ImageStyle}" />
 
                             </ComboBox>
-                            <TextBox Width="200" Text="1.0"/>
+                            <TextBox x:Name="muzzle_text" Width="200" Text="1.0"/>
                         </StackPanel>
 
                         <!-- 第四行 -->
                         <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <ComboBox Width="50" Margin="0,0,10,0">
+                            <ComboBox x:Name="grip_combobox" Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
                                 <Image Source="/Resources/grips/angle.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/grips/light.png"  Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/grips/line.png" Style="{StaticResource ImageStyle}" />
@@ -91,19 +95,19 @@
                                 <Image Source="/Resources/grips/thumb.png" Style="{StaticResource ImageStyle}" />
 
                             </ComboBox>
-                            <TextBox Width="200" Text="1.0"/>
+                            <TextBox x:Name="grip_text" Width="200" Text="1.0"/>
                         </StackPanel>
-                      
+
                         <!-- 第 six行 -->
                         <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <ComboBox Width="50" Margin="0,0,10,0">
+                            <ComboBox  x:Name="pose_combobox" Width="50" Margin="0,0,10,0" SelectionChanged="ComboBox_SelectionChanged">
                                 <Image Source="/Resources/poses/crawl.png" Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/poses/down.png" Style="{StaticResource ImageStyle}" />
                                 <Image Source="/Resources/poses/stand.png" Style="{StaticResource ImageStyle}" />
-                                <Image Source="/Resources/grips/angle.png" Style="{StaticResource ImageStyle}" />
+
 
                             </ComboBox>
-                            <TextBox Width="200" Text="1.0"/>
+                            <TextBox  x:Name="pose_text" Width="200" Text="1.0"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -113,5 +117,5 @@
             </TabItem>
         </TabControl>
     </Grid>
-  
+
 </Window>

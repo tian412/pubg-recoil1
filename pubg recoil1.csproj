@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <RootNamespace>pubg_recoil1</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>GHUB.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="GHUB.ico" />
     <None Remove="Resources\grips\angle.png" />
     <None Remove="Resources\grips\light.png" />
     <None Remove="Resources\grips\line.png" />
@@ -26,18 +28,22 @@
     <None Remove="Resources\muzzles\bc1.png" />
     <None Remove="Resources\muzzles\bc2.png" />
     <None Remove="Resources\muzzles\bc3.png" />
+    <None Remove="Resources\muzzles\eliuquan.png" />
     <None Remove="Resources\muzzles\none.png" />
     <None Remove="Resources\muzzles\xx.png" />
     <None Remove="Resources\muzzles\xx1.png" />
     <None Remove="Resources\muzzles\xy1.png" />
     <None Remove="Resources\muzzles\xy2.png" />
     <None Remove="Resources\muzzles\xy3.png" />
+    <None Remove="Resources\muzzles\yazuiqiangkou.png" />
+    <None Remove="Resources\muzzles\zt.png" />
     <None Remove="Resources\poses\crawl.png" />
     <None Remove="Resources\poses\down.png" />
     <None Remove="Resources\poses\stand.png" />
     <None Remove="Resources\scopes\none.png" />
     <None Remove="Resources\scopes\quanxi.png" />
     <None Remove="Resources\scopes\reddot.png" />
+    <None Remove="Resources\scopes\x15.png" />
     <None Remove="Resources\scopes\x2.png" />
     <None Remove="Resources\scopes\x3.png" />
     <None Remove="Resources\scopes\x4.png" />
@@ -47,55 +53,94 @@
     <None Remove="Resources\stocks\none.png" />
     <None Remove="Resources\stocks\normal.png" />
     <None Remove="Resources\stocks\pg.png" />
+    <None Remove="Resources\stocks\tuosaiban.png" />
+    <None Remove="Resources\stocks\zhanshuqiangtuo.png" />
+    <None Remove="Resources\stocks\zhedieshiqiangtuo.png" />
+    <None Remove="Resources\stocks\zhongxinqiangtuo.png" />
+    <None Remove="Resources\stocks\zidandai.png" />
+    <None Remove="Resources\weapons\012.png" />
+    <None Remove="Resources\weapons\98k.png" />
     <None Remove="Resources\weapons\ACE32.png" />
     <None Remove="Resources\weapons\AKM.png" />
+    <None Remove="Resources\weapons\amr.png" />
     <None Remove="Resources\weapons\AUG.png" />
     <None Remove="Resources\weapons\aug1.png" />
+    <None Remove="Resources\weapons\awm.png" />
     <None Remove="Resources\weapons\Berry.png" />
+    <None Remove="Resources\weapons\dbs.png" />
+    <None Remove="Resources\weapons\delagongnuofu.png" />
     <None Remove="Resources\weapons\DLG.png" />
     <None Remove="Resources\weapons\DP28.png" />
+    <None Remove="Resources\weapons\dragunov.png" />
     <None Remove="Resources\weapons\FAMAS.png" />
     <None Remove="Resources\weapons\G36C.png" />
     <None Remove="Resources\weapons\GROZA.png" />
     <None Remove="Resources\weapons\JS9.png" />
     <None Remove="Resources\weapons\K2.png" />
+    <None Remove="Resources\weapons\k98.png" />
     <None Remove="Resources\weapons\M16.png" />
+    <None Remove="Resources\weapons\m16a4.png" />
+    <None Remove="Resources\weapons\m24.png" />
     <None Remove="Resources\weapons\M249.png" />
     <None Remove="Resources\weapons\M416.png" />
+    <None Remove="Resources\weapons\m762.png" />
     <None Remove="Resources\weapons\MG3.png" />
+    <None Remove="Resources\weapons\micro_uzi.png" />
     <None Remove="Resources\weapons\MINI.png" />
+    <None Remove="Resources\weapons\mini14.png" />
     <None Remove="Resources\weapons\MK12.png" />
     <None Remove="Resources\weapons\MK14.png" />
     <None Remove="Resources\weapons\MK47.png" />
+    <None Remove="Resources\weapons\mosin_nagant.png" />
+    <None Remove="Resources\weapons\moxinnaganbuqiang.png" />
     <None Remove="Resources\weapons\MP5.png" />
+    <None Remove="Resources\weapons\mp5k.png" />
     <None Remove="Resources\weapons\MP9.png" />
+    <None Remove="Resources\weapons\none.png" />
     <None Remove="Resources\weapons\P90.png" />
+    <None Remove="Resources\weapons\paijipao.png" />
     <None Remove="Resources\weapons\PP19.png" />
     <None Remove="Resources\weapons\QBU.png" />
     <None Remove="Resources\weapons\QBZ.png" />
+    <None Remove="Resources\weapons\s12k.png" />
+    <None Remove="Resources\weapons\s1897.png" />
+    <None Remove="Resources\weapons\s686.png" />
+    <None Remove="Resources\weapons\scar-l.png" />
     <None Remove="Resources\weapons\SCAR.png" />
+    <None Remove="Resources\weapons\shizilv.png" />
     <None Remove="Resources\weapons\SKS.png" />
     <None Remove="Resources\weapons\sks1.png" />
     <None Remove="Resources\weapons\SLR.png" />
+    <None Remove="Resources\weapons\tangmuxunchongfengqiang.png" />
+    <None Remove="Resources\weapons\tiequan.png" />
     <None Remove="Resources\weapons\TOM.png" />
+    <None Remove="Resources\weapons\Tommy_gun.png" />
     <None Remove="Resources\weapons\UMP.png" />
+    <None Remove="Resources\weapons\ump45.png" />
     <None Remove="Resources\weapons\UZI.png" />
     <None Remove="Resources\weapons\VECTOR.png" />
     <None Remove="Resources\weapons\VSS.png" />
+    <None Remove="Resources\weapons\win94.png" />
+    <None Remove="Resources\weapons\zidongzhuangtianbuqiang.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Emgu.CV" Version="4.9.0.5494" />
+    <Content Include="GHUB.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MouseKeyHook" Version="5.7.1" />
     <PackageReference Include="Newtonsoft.Json.Schema" Version="4.0.1" />
     <PackageReference Include="OpenCV" Version="2.4.11" />
     <PackageReference Include="OpenCV.Net" Version="3.4.2" />
     <PackageReference Include="OpenCvSharp4" Version="4.10.0.20241108" />
     <PackageReference Include="OpenCvSharp4.Extensions" Version="4.10.0.20241108" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20241108" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="GHUB.ico" />
     <Resource Include="Resources\grips\angle.png" />
     <Resource Include="Resources\grips\light.png" />
     <Resource Include="Resources\grips\line.png" />
@@ -105,62 +150,86 @@
     <Resource Include="Resources\muzzles\bc1.png" />
     <Resource Include="Resources\muzzles\bc2.png" />
     <Resource Include="Resources\muzzles\bc3.png" />
+    <Resource Include="Resources\muzzles\eliuquan.png" />
     <Resource Include="Resources\muzzles\none.png" />
     <Resource Include="Resources\muzzles\xx.png" />
     <Resource Include="Resources\muzzles\xx1.png" />
     <Resource Include="Resources\muzzles\xy1.png" />
     <Resource Include="Resources\muzzles\xy2.png" />
     <Resource Include="Resources\muzzles\xy3.png" />
+    <Resource Include="Resources\muzzles\yazuiqiangkou.png" />
+    <Resource Include="Resources\muzzles\zt.png" />
     <Resource Include="Resources\poses\crawl.png" />
     <Resource Include="Resources\poses\down.png" />
     <Resource Include="Resources\poses\stand.png" />
     <Resource Include="Resources\scopes\none.png" />
     <Resource Include="Resources\scopes\quanxi.png" />
     <Resource Include="Resources\scopes\reddot.png" />
+    <Resource Include="Resources\scopes\x15.png" />
     <Resource Include="Resources\scopes\x2.png" />
     <Resource Include="Resources\scopes\x3.png" />
     <Resource Include="Resources\scopes\x4.png" />
     <Resource Include="Resources\scopes\x6.png" />
     <Resource Include="Resources\scopes\x8.png" />
-    <Resource Include="Resources\stocks\heavy.png" />
     <Resource Include="Resources\stocks\none.png" />
-    <Resource Include="Resources\stocks\normal.png" />
-    <Resource Include="Resources\stocks\pg.png" />
+    <Resource Include="Resources\stocks\tuosaiban.png" />
+    <Resource Include="Resources\stocks\zhanshuqiangtuo.png" />
+    <Resource Include="Resources\stocks\zhedieshiqiangtuo.png" />
+    <Resource Include="Resources\stocks\zhongxinqiangtuo.png" />
+    <Resource Include="Resources\stocks\zidandai.png" />
+    <Resource Include="Resources\weapons\012.png" />
     <Resource Include="Resources\weapons\ACE32.png" />
     <Resource Include="Resources\weapons\AKM.png" />
+    <Resource Include="Resources\weapons\amr.png" />
     <Resource Include="Resources\weapons\AUG.png" />
-    <Resource Include="Resources\weapons\aug1.png" />
-    <Resource Include="Resources\weapons\Berry.png" />
-    <Resource Include="Resources\weapons\DLG.png" />
+    <Resource Include="Resources\weapons\awm.png" />
+    <Resource Include="Resources\weapons\dbs.png" />
+    <Resource Include="Resources\weapons\delagongnuofu.png" />
     <Resource Include="Resources\weapons\DP28.png" />
+    <Resource Include="Resources\weapons\dragunov.png" />
     <Resource Include="Resources\weapons\FAMAS.png" />
     <Resource Include="Resources\weapons\G36C.png" />
     <Resource Include="Resources\weapons\GROZA.png" />
     <Resource Include="Resources\weapons\JS9.png" />
     <Resource Include="Resources\weapons\K2.png" />
-    <Resource Include="Resources\weapons\M16.png" />
+    <Resource Include="Resources\weapons\k98.png" />
+    <Resource Include="Resources\weapons\m16a4.png" />
+    <Resource Include="Resources\weapons\m24.png" />
     <Resource Include="Resources\weapons\M249.png" />
     <Resource Include="Resources\weapons\M416.png" />
+    <Resource Include="Resources\weapons\m762.png" />
     <Resource Include="Resources\weapons\MG3.png" />
-    <Resource Include="Resources\weapons\MINI.png" />
+    <Resource Include="Resources\weapons\micro_uzi.png" />
+    <Resource Include="Resources\weapons\mini14.png" />
     <Resource Include="Resources\weapons\MK12.png" />
     <Resource Include="Resources\weapons\MK14.png" />
     <Resource Include="Resources\weapons\MK47.png" />
-    <Resource Include="Resources\weapons\MP5.png" />
+    <Resource Include="Resources\weapons\mosin_nagant.png" />
+    <Resource Include="Resources\weapons\moxinnaganbuqiang.png" />
+    <Resource Include="Resources\weapons\mp5k.png" />
     <Resource Include="Resources\weapons\MP9.png" />
+    <Resource Include="Resources\weapons\none.png" />
     <Resource Include="Resources\weapons\P90.png" />
+    <Resource Include="Resources\weapons\paijipao.png" />
     <Resource Include="Resources\weapons\PP19.png" />
     <Resource Include="Resources\weapons\QBU.png" />
     <Resource Include="Resources\weapons\QBZ.png" />
-    <Resource Include="Resources\weapons\SCAR.png" />
+    <Resource Include="Resources\weapons\s12k.png" />
+    <Resource Include="Resources\weapons\s1897.png" />
+    <Resource Include="Resources\weapons\s686.png" />
+    <Resource Include="Resources\weapons\scar-l.png" />
+    <Resource Include="Resources\weapons\shizilv.png" />
     <Resource Include="Resources\weapons\SKS.png" />
-    <Resource Include="Resources\weapons\sks1.png" />
     <Resource Include="Resources\weapons\SLR.png" />
-    <Resource Include="Resources\weapons\TOM.png" />
-    <Resource Include="Resources\weapons\UMP.png" />
+    <Resource Include="Resources\weapons\tangmuxunchongfengqiang.png" />
+    <Resource Include="Resources\weapons\tiequan.png" />
+    <Resource Include="Resources\weapons\Tommy_gun.png" />
+    <Resource Include="Resources\weapons\ump45.png" />
     <Resource Include="Resources\weapons\UZI.png" />
     <Resource Include="Resources\weapons\VECTOR.png" />
     <Resource Include="Resources\weapons\VSS.png" />
+    <Resource Include="Resources\weapons\win94.png" />
+    <Resource Include="Resources\weapons\zidongzhuangtianbuqiang.png" />
   </ItemGroup>
 
   <ItemGroup>
